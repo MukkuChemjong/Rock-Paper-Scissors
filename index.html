@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css ">
+</head>
+<body>
+    <div class="game-window">
+        <p class="output" id="output-id">here</p>
+        <div class="score">
+            <p class="computer-score" id="computer-id">0</p>
+            <p class="space"> - </p>
+            <p class="human-score" id="human-id">0</p>
+        </div>
+
+        <div class="buttons">
+            <button class="paper" onclick="getComputerChoice('paper')">Paper</button>
+            <button class="rock" onclick="getComputerChoice('rock')">Rock</button>
+            <button class="scissor" onclick="getComputerChoice('scissor')">Scissor</button>
+        </div>
+    </div>
+</body>
+</html>

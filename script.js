@@ -3,16 +3,14 @@ let playerScore =0;
 let computerScore = 0;
 
 function yourChoice(choice){
+    
+    winner(choice,getComputerChoice());
     if(playerScore === 5){
         window.alert("You have won!")
     }
     else if(computerScore === 5){
         window.alert("Computer Won!")
     }
-    else{
-        winner(choice,getComputerChoice());
-    }
-
 }
 
 function getComputerChoice(){
@@ -25,44 +23,65 @@ function getComputerChoice(){
 
 function winner(playerSelection, computerSelection){
     if((playerSelection === "Rock") & (computerSelection === "Paper")){
+        document.getElementById("plrImg").src = "images/rock.jpg";
+        document.getElementById("comImg").src = "images/paper.jpg";
+
+        document.getElementById("winner").innerHTML = "Computer won!";
         computerScore += 1;
         document.getElementById("computerScoreId").innerHTML = computerScore;
-        return "You lose Paper beats Rock.";
     }
     else if((playerSelection === "Rock") & (computerSelection === "Scissor")){
         playerScore += 1;
+        document.getElementById("plrImg").src = "images/rock.jpg";
+        document.getElementById("comImg").src = "images/scissor.jpg";
         document.getElementById("humanScoreId").innerHTML = playerScore;
-        return "You win Rock beats Scissor.";
+
+        document.getElementById("winner").innerHTML = "Player won!";
     }
     else if((playerSelection === "Rock") & (computerSelection === "Rock")){
-        return "You tied";
+        document.getElementById("plrImg").src = "images/rock.jpg";
+        document.getElementById("comImg").src = "images/rock.jpg";
+
+        document.getElementById("winner").innerHTML = "Tied!";
     }
     else if((playerSelection === "Paper") & (computerSelection === "Rock")){
         playerScore += 1;
+        document.getElementById("plrImg").src = "images/paper.jpg";
+        document.getElementById("comImg").src = "images/rock.jpg";
         document.getElementById("humanScoreId").innerHTML = playerScore;
-        return "You win Paper beats Rock";
+        document.getElementById("winner").innerHTML = "Player won!";
+
     }
     else if((playerSelection === "Paper") & (computerSelection === "Scissor")){
         computerScore += 1;
+        document.getElementById("plrImg").src = "images/paper.jpg";
+        document.getElementById("comImg").src = "images/scissor.jpg";
         document.getElementById("computerScoreId").innerHTML = computerScore;
-        return "You lose Scissor beats Paper";
+
+        document.getElementById("winner").innerHTML = "Computer won!";
     }
     else if((playerSelection === "Paper") & (computerSelection === "Paper")){
-        return "You tied";
+        document.getElementById("plrImg").src = "images/paper.jpg";
+        document.getElementById("comImg").src = "images/paper.jpg";
+        document.getElementById("winner").innerHTML = "Tied!";
     }
     else if((playerSelection === "Scissor") & (computerSelection === "Paper")){
-        
         playerScore += 1;
+        document.getElementById("plrImg").src = "images/scissor.jpg";
+        document.getElementById("comImg").src = "images/paper.jpg";
         document.getElementById("humanScoreId").innerHTML = playerScore;
-        return "You win Scissor beats Paper.";
+        document.getElementById("winner").innerHTML = "Player won!";
     }
     else if((playerSelection === "Scissor") & (computerSelection === "Rock")){
-
+        document.getElementById("plrImg").src = "images/scissor.jpg";
+        document.getElementById("comImg").src = "images/rock.jpg";
         computerScore += 1;
         document.getElementById("computerScoreId").innerHTML = computerScore;
-        return "You lose Rock beats Scissor";
+        document.getElementById("winner").innerHTML = "Computer won!";
     }
     else if((playerSelection === "Scissor") & (computerSelection === "Scissor")){
-        return "You tied.";
+        document.getElementById("plrImg").src = "images/scissor.jpg";
+        document.getElementById("comImg").src = "images/scissor.jpg";
+        document.getElementById("winner").innerHTML = "Tied!";
     }
 }

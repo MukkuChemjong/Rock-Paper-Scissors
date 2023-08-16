@@ -2,37 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel=stylesheet type="text/css" href="styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
 </head>
 <body>
-    <div class="container">
-        <div class="topContainer">
-            <div class="comScore">
-                <p class="scoreTitle">Computer Score: &nbsp</p>
-                <p id="computerScoreId" class="score">0</p>
-            </div>
-            <img src="images/logo.png" class="logo">
-            <div class="plrScore">
-                <p class="scoreTitle">Player Score: &nbsp</p>
-                <p  id="humanScoreId" class="score">0</p>
-            </div>
-        </div>
-
-        <div class="middleContainer">
-            <img src="images/galaxy-11098_1280.jpg" alt="" class="midImg" id="comImg">
-            <p class="winner" id="winner">Winner</p>
-            <img src="images/galaxy-11098_1280.jpg" alt="" class="midImg" id="plrImg">
-        </div>
-
-        <div class="bottomContainer">
-            <button class="paper" onclick="yourChoice('Paper')" id="options">Paper</button>
-            <button class="rock" onclick="yourChoice('Rock')"id="options">Rock</button>
-            <button class="scissor"onclick="yourChoice('Scissor')" id="options">Scissor</button>
-        </div>
-    </div>
+    <center><button class="newGrid">New Grid</button></center>
+    <div id="container"></div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

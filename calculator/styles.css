@@ -1,0 +1,11 @@
+.number{
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.display{
+    border: 1px solid black;
+    height: 40px;
+    width: 388px;
+}

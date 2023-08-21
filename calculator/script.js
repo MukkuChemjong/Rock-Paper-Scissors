@@ -3,9 +3,16 @@ var firstNum = "";
 var secondNum = "";
 var total = "";
 var previousOperator = "";
+var secondNumStart = false; 
+var buttonHolder = "";
+var restart = false;
 
 var checkNumber = function(input) {
-  return /^[1234567890]$/.test(input);
+  return /^[1234567890.]$/.test(input);
+}
+
+var checkOperator = function(input) {
+  return /^[+/*-]$/.test(input);
 }
 
 function add(num1,num2){
@@ -27,30 +34,35 @@ function divide(num1,num2){
 function operate(){
   if(operator === "+"){
     document.getElementById("display").innerHTML += "=";
-    add(parseInt(firstNum),parseInt(secondNum));
+    add(parseFloat(firstNum),parseFloat(secondNum));
+    restart = true;
   }
   else if(operator === "-"){
     document.getElementById("display").innerHTML += "=";
-    subtract(parseInt(firstNum),parseInt(secondNum));
+    subtract(parseFloat(firstNum),parseFloat(secondNum));
+    restart = true;
   }
   else if(operator === "*"){
     document.getElementById("display").innerHTML += "=";
-    multiply(parseInt(firstNum),parseInt(secondNum));
+    multiply(parseFloat(firstNum),parseFloat(secondNum));
+    restart = true;
   }
   else if(operator === "/" && firstNum === "0"){
     document.getElementById("display").innerHTML += "=";
     document.getElementById("display").innerHTML += "Nan";
     window.alert("Nice try!");
+    restart = true;
   }
   else{
     console.log(firstNum,secondNum);
     document.getElementById("display").innerHTML += "=";
-    divide(parseInt(firstNum),parseInt(secondNum));
+    divide(parseFloat(firstNum),parseFloat(secondNum));
+    restart = true;
   }
 }
 
 function clearDisplay(){
-  document.getElementById("display").innerHTML = "";
+  document.getElementById("display").innerHTML = "&nbsp;";
   operator = "";
   firstNum = "";
   secondNum = "";
@@ -58,46 +70,75 @@ function clearDisplay(){
 
 function operation(operatorButton){
   operator = operatorButton;
+  document.getElementById("decimal").disabled = false;
 
   if(secondNum != ""){
     if(previousOperator === "+"){
-      total = parseInt(firstNum) + parseInt(secondNum);
+      total = parseFloat(firstNum) + parseFloat(secondNum);
       firstNum = total;
       secondNum = "";
     }
     else if(previousOperator === "-"){
-      total = parseInt(firstNum) - parseInt(secondNum);
+      total = parseFloat(firstNum) - parseFloat(secondNum);
       firstNum = total;
       secondNum = "";
     }
     else if(previousOperator === "*"){
-      total = parseInt(firstNum) * parseInt(secondNum);
+      total = parseFloat(firstNum) * parseFloat(secondNum);
       firstNum = total;
       secondNum = "";
     }
     else if(previousOperator === "/"){
-      total = parseInt(firstNum) / parseInt(secondNum);
+      total = parseFloat(firstNum) / parseFloat(secondNum);
       firstNum = total;
       secondNum = "";
     }
   }
-  if(operatorButton === "*"){
-    document.getElementById("display").innerHTML += "x";
-  }
-  else{
-    document.getElementById("display").innerHTML += operatorButton;
-  }
+  document.getElementById("display").innerHTML += operatorButton;
 }
 
 function addToDisplay(button){
+    buttonHolder = button;
+
+  if(restart === true){
+    document.getElementById("display").innerHTML = "";
+    restart = false;
+    operator = "";
+    firstNum = "";
+    secondNum = "";
+
+  }
+
   if ((checkNumber(button) === true) && operator === ""){
+    if(button === "."){
+        document.getElementById("decimal").disabled = true;
+    }
     document.getElementById("display").innerHTML += button;
     firstNum += button;
   }
   else{
+    if(button === "."){
+        document.getElementById("decimal").disabled = true;
+    }
+    secondNumStart = true;
     document.getElementById("display").innerHTML += button;
     secondNum += button;
     previousOperator = operator;
   }
 }
 
+function backspace(){
+    if (operator === ""){
+        document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.slice(0,-1);
+        firstNum = firstNum.slice(0,-1);
+    }
+    else if(checkOperator(buttonHolder) === true && secondNumStart === false){
+        document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.slice(0,-1);
+        firstNum = firstNum.slice(0,-1);
+        console.log(secondNum);
+    }
+    else if(secondNumStart === true){
+        document.getElementById("display").innerHTML = document.getElementById("display").innerHTML.slice(0,-1);
+        secondNum = secondNum.slice(0,-1);
+    }
+}

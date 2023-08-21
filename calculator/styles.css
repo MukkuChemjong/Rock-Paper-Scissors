@@ -1,72 +1,88 @@
-/* Reset some default styles */
-* {
+/* Reset some default browser styles */
+body, button, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Set a background color for the entire page */
-body {
-    background-color: #f0f0f0;
+/* Center the calculator */
+.body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
-/* Style the calculator container */
-.body {
-    background-color: #fff;
+/* Calculator container */
+.calculator {
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the number and operation buttons */
-.number {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 10px;
-    transition: background-color 0.2s ease;
-}
-
-.number:hover {
-    background-color: #ccc;
-}
-
-/* Style the equal and clear buttons */
-.operation {
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 10px;
-    transition: background-color 0.2s ease;
-}
-
-.operation:hover {
-    background-color: #ccc;
-}
-
-/* Style the display */
+/* Display area */
 .display {
-    grid-column: span 4;
-    text-align: right;
     font-size: 24px;
+    text-align: right;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
 }
+
+/* Button styles */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.number, .operation, .clear, .delete {
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.number:hover, .operation:hover, .clear:hover, .delete:hover {
+    background-color: #ddd;
+}
+
+.operation {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.operation:hover {
+    background-color: #e39e3e;
+}
+
+.clear {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #c9302c;
+}
+
+.delete {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+.delete:hover {
+    background-color: #286090;
+}
+
+#decimal {
+    font-size: 20px;
+}
+

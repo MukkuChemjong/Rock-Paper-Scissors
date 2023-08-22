@@ -8,71 +8,73 @@
     
 </head>
 <body class="body">
-
-    <div class="leftContainer">
+    <div class="leftside">
         <img src="images/profile.avif" alt="" class="profile">
         <img src="images/logo.png" alt="" class="logo">
-        <div style="background-color: #5b657e; position: absolute; height: 137px; width: 496px; top: 100px; opacity: 0.5;"></div>
+        <div class="logoBanner"></div>
     </div>
 
-    <div class="rightContainer">
-        <div class="top">
+    <div class="rightside">
+        <div class="topContainer">
             <p class="topText"> This is not a real online service! 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Pellentesque commodo volutpat sodales. Sed pharetra sem et erat mattis, a vulputate tellus suscipit.
             </p>
 
             <p class="topTextBot">
-                You know you want to.
+                You <i>know</i> you want to.
             </p>
         </div>
-        <div class="middle">
-            <div class="middleTitle">Enter your Info below!</div>
-            <form action="#">
-                <div>
-                    <div style="display: flex;">
-                        <div style="width: 200px; margin-right: 147px;">
-                            <label for="firstname" style="font-size: 16px;">First Name</label>
-                            <input type="text" id="firstname" style="width: 226px; height: 21px;">
-                        </div>
-                        
-                        <div style="width: 200px;" > 
-                            <label for="lastname">Last Name</label>
-                            <input type="text" id="lastname" style="width: 226px; height: 21px;">
-                        </div>
-                    </div>
-                    
-                    <div style="display: flex; width: 582px; margin-top: 16px;">
-                        <div style="width: 200px; margin-right: 147px;">
-                            <label for="email" style="font-size: 16px;">Email</label>
-                            <input type="text" id="email" style="width: 226px; height: 21px;">
+        <form action="#">
+            <div class="middleContainer">
+                <div class="middleText">Let's do this!</div>
+                    <div class="namesContainer">
+                        <div style="display: flex;">
+                            <div>
+                                <label for="firstname">First Name</label>
+                                <input type="text" class="firstname" required>
+                            </div>
+                            
+                            <div style="display: block;">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" class="lastname" required>
+                            </div>
                         </div>
 
-                        <div>
-                            <label for="phonenum" style="font-size: 16px;">Phone Number</label>
-                            <input type="text" id="phonenum" style="width: 226px; height: 21px;">
+                        <div style="display: flex;">
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" pattern=".+@gmail\.com" class="email" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="phone" required minlength="9"> 
+                            </div>     
+                        </div>
+
+                        <div style="display: flex;">
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" class="password" required minlength="7">
+                            </div>
+
+                            <div>
+                                <label for="cPassword">Confirm Password</label>
+                                <input type="password" class="cPassword" required minlength="7">
+                            </div>
                         </div>
                     </div>
-                    
-                    <div style="display: flex; width: 582px; margin-top: 16px;">
-                        <div style="width: 200px; margin-right: 147px;">
-                            <label for="password" style="font-size: 16px;">Password</label>
-                            <input type="text" id="password" style="width: 226px; height: 21px;">
-                        </div>
-                        
-                        <div style="width: 200px; margin-right: 147px;">
-                            <label for="cpassword" style="font-size: 16px;">Confirm Password</label>
-                            <input type="text" id="cpassword" style="width: 226px; height: 21px;">
-                        </div>
-                    </div>
-                    
+            </div>
+
+            <div class="bottomContainer">
+                <div style="margin-left: 60px; margin-top: 23px;">
+                    <button type="submit"style="margin-left: 0;" id="submit">Create Account</button>
+                    <p class="already">Already have an account? <span style="color: #596d48; font-weight: bold;">Log in</span></p>
                 </div>
-            </form>
-        </div>
-
-        <div class="bottom">
-            <div class="line"></div>
-        </div>
+            </div>
+        </form>
     </div>
+   
 </body>
 </html>

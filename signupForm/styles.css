@@ -1,70 +1,109 @@
 .body{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
+    margin: 0px;
+    height: 100vh;
+    padding: 0px;
     display: flex;
-    height: 896px;
+    font-family: 'Times New Roman', Times, serif;
+      
 }
 
-.leftContainer{
+.leftside{
     height: 100%;
-    width: 816px;
+    width: 50%;
+    display: block;
+}
+
+.rightside{
+    width: 50%;
 }
 
 .profile{
     height: 100%;
     width: 100%;
+    margin: 0;
 }
 
 .logo{
     position: absolute;
-    top: 100px;
-    left: 183px;
-    background-color: black;
-
-    height: 136px;
-    width: 144px;
-
+    top: 156px;
+    left: 196px;
     z-index: 1;
 }
 
-.topText{
-    width: 619px;
-    height: 115px;
-
-    font-size: 22px;
-    font-weight: 600;
-
-    margin-top: 131px;
-    margin-left: 83px;
+.logoBanner{
+    top: 156px;
+    left: 0;
+    position: absolute;
+    height: 201px;
+    width: 633px;
+    opacity: 0.5;
+    background-color: #5b657e;
 }
 
-.topTextBot{
-    font-size: 22px;
-    font-weight: 600;
-
-    margin-top: 0;
-    margin-left: 83px;
-}
-
-.middle{
-    width: 619px;
-    margin-left: 84px;
-}
-
-.middleTitle{
-    font-size: 21px;
-    font-weight: 600;
-
-    margin-bottom: 33px;
-}
-
-.line{
+.topContainer{
     width: 100%;
-
-    border: 2px solid black;
 }
 
-.rightContainer{
+.middleContainer{
+    box-shadow: 0 3px 0 rgb(205, 211, 205);
+}
+
+.topText,.topTextBot,.middleText{
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 60px;
+}
+
+.topText{
+    margin-top: 156px;
+}
+
+input,label{
+    display: block;
+    height: 27px;
+    width: 236px;
+
+    margin-left: 59px;
+}
+label{
+    color:black;
+    font-weight: bold;
+}
+
+input{
+    border: 1px solid rgb(205, 211, 205);
+    border-radius: 5px;
+    margin-bottom: 24px;
+    padding-left: 5px;
+}
+
+.middleText{
+    margin-top: 43px;
+    margin-bottom: 20px;
+}
+
+.already{
+    font-size: 17px;
+}
+
+button{
+    background-color: #596d48;
+    height: 49px;
+    width: 236px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid #596d48;
+    cursor: pointer;
+}
+
+span:hover{
+    cursor: pointer;
+    color: white;
 }

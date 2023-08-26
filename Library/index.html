@@ -1,1 +1,26 @@
-blank
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <p class="webtitle">Library</p>
+        <button class="signin">Sign</button>
+    </div>
+    <button class="addBook" onclick="showWindow()">+</button>
+    <div class="mainbody" >
+        <form action="#">
+            <input type="text" class="title" id="titleId" placeholder="Title"> 
+            <input type="text" class="author" id= "authorId"placeholder="Author">
+            <input type="number" class="pages"  id="pagesId" placeholder="Pages">
+            <button type="submit" class="submit" onclick="addBook()" >Submit</button>
+        </form>
+    </div>
+</body>
+</html>

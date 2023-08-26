@@ -1,0 +1,274 @@
+html,body{
+    margin: 0;
+    font-family: Roboto;
+    display: flex;
+}
+.leftside{
+    height: 100vh;
+    background-color: #6d28d9;
+    width: 276px;
+}
+
+.leftsideHead{
+    display: flex;
+    align-items: center;
+}
+
+.dashboardIcon{
+    height: 47px;
+    width: 33px;
+    margin-left: 32px;
+}
+
+.dashboard{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.icon{
+    height: 31px;
+    width: 31px;
+
+    margin-bottom: 8px;
+    color: white;
+}
+
+.leftsideMiddle{
+    display: flex;
+    align-items: center;
+}
+
+.iconContainer{
+    display: inline-block;
+    width: 35px;
+    margin-left: 33px;
+}
+
+.iconNamesContainer{
+    margin-left: 10px;
+}
+
+.iconName{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.leftsideBot{
+    display: flex;
+    margin-top: 43px;
+}
+
+/*Search Bar Part*/
+.head{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.headIcon{
+    height: 24px;
+    width: 24px;
+
+    margin-left: 39px;
+    margin-right: 18px;
+}
+
+.searchbar{
+    width: 536px;
+    height: 26px;
+
+    border-radius: 16px;
+    border: 1px solid white;
+    background-color: #e2e8f0;
+
+    margin-right: 39px;
+}
+
+.headIcons{
+    display: flex;
+    align-items: center;
+
+}
+
+.headProfile{
+    height: 50px;
+    width: 50px;
+
+    border-radius:25px;
+    margin-right: 24px;
+}
+
+.username{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Head Section*/
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.profilePicture{
+    height: 60px;
+    width: 60px;
+    
+    border-radius: 30px;
+    margin-left: 41px;
+    margin-right: 18px;
+}
+
+.toptext{
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 9px;
+}
+
+.bottomtext{
+    margin-top: 0;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+button{
+    height: 35px;
+    width: 88px;
+    background-color: #1992d4;
+    border-radius: 19px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*Main Body Section*/
+
+.mainTitle{
+    font-size: 19px;
+    font-weight: bold;
+
+    margin-bottom: 0;
+    margin-left: 27px;
+}
+
+.mainBody{
+    background-color: #e2e8f0;
+    display: flex;
+}
+
+.rectangles{
+    display: grid;
+    margin-top: -16px;
+    grid-template-columns: 366px 0;
+    grid-template-rows: 209px 202px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.projectRectangle{
+    background-color: white;
+    height: 189px;
+    width: 330px;
+
+    margin-left: 15px;
+    border-radius: 14px;
+}
+
+.projectTitle{
+    padding-top: 27px;
+    padding-left: 29px;
+    margin-bottom: 0;
+
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.projectDisc{
+    margin-top: 0;
+    padding-left: 29px;
+    width: 283px;
+    color: gray;
+}
+
+.functionIcons{
+    margin-top: 49px;
+    display: flex;
+    justify-content: end;
+}
+
+.bodyIcon{
+    height: 25px;
+    width: 25px;
+}
+
+/*Announcement Section*/
+
+.left{
+    margin-left: 353px;
+}
+
+.accRectangle{
+    background-color: white;
+    margin-top: 13px;
+    padding-top: 10px;
+    padding-left: 27px;
+    padding-right: 22px;
+    border-radius: 10px;
+
+    height: 300px;
+}
+.accContainer{
+    width: 181px;
+    margin-bottom: 33px;
+}
+
+.accTitle{
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.accDisc{
+    margin-top: 0;
+    font-size: 12px;
+    color: gray;
+}
+
+/*Trending Section*/
+
+.trendingBody{
+    background-color: white;
+    padding-bottom: 12px;
+    width: 212px;
+
+    border-radius: 10px;
+}
+
+.trendingRectangle{
+    display: flex;
+    align-items: center;
+
+    padding-left: 15px;
+    padding-top: 2px;
+}
+.trendingImg{
+    height: 40px;
+    width: 40px;
+
+    border-radius: 20px;
+    margin-right: 16px;
+}
+
+.profileTitle{
+    margin-bottom: 0;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.profileTag{
+    margin-top: 0;
+    font-size: 13px;
+    color:gray;
+}

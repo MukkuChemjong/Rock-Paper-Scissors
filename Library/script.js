@@ -1,7 +1,9 @@
 const myLibrary = [
-    author = "J. R. R> Tolkien",
-    title = "",
-    pages = 0
+    {
+    author: "J. R. R. Tolkien",
+    title: "The Lord of the Rings",
+    pages: 1216
+    }
 ];
 
 function Book(author, title, pages){
@@ -13,9 +15,10 @@ function Book(author, title, pages){
 function addBook(){
     var author = document.getElementById("authorId").value;
     var title = document.getElementById("titleId").value;
-    var pages = document.getElementById("pagesId").value;
+    var pages = document.getElementById("pagesId").value;;
 
     const newbook = new Book(author,title,pages);
     myLibrary.push(newbook);
-    console.log(myLibrary);
+    document.getElementById("bookLibrary").innerHTML += `<div id='books'>${newbook.author} <br> ${newbook.title} <br> ${newbook.pages} <br> </div>`;
 }
+

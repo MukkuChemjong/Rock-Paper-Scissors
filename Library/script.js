@@ -13,7 +13,6 @@ function Book(author, title, pages){
 }
 
 function showWindow(){
-    console.log("here");
     document.getElementById("form").style.opacity = "1";
 }
 
@@ -25,14 +24,17 @@ function addBook(){
     const newbook = new Book(author,title,pages);
     myLibrary.push(newbook);
 
-    if(author === null || title === null || pages === null){
-        prompt("Error!");
-    }
-    else{
+    if(author =! ("") && title != ("") && pages != ("")){
         document.getElementById("form").style.opacity = "0";
         document.getElementById("titleGridId").innerHTML += `<div class='title'>${newbook.title}</div>`;
         document.getElementById("authorGridId").innerHTML += `<div class='author'>${newbook.author}</div>`;
         document.getElementById("pagesGridId").innerHTML += `<div class='pages'>${newbook.pages}</div>`;
+        if(document.getElementById("readBook").checked =true){
+            document.getElementById("readGridId").innerHTML += `<div class='read'>Read</div>`;
+        }
+        else{
+            document.getElementById("readGridId").innerHTML += `<div class='read'>Not Read</div>`;
+        }
     }
 }
 

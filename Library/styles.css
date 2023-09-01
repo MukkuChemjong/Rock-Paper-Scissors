@@ -3,6 +3,37 @@ body,html{
     font-family: "Roboto";
 }
 
+#form{
+    background-color: black;
+    position: absolute;
+    top: 211px;
+    left: 519px;
+    height: 300px;
+    width: 231px;
+   text-align: center;
+}
+
+.input{
+    width: 200px;
+    height: 38px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.submit{
+    width: 200px;
+    height: 41px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
 .header{
     margin-top: 0;
     width: 100%;
@@ -27,10 +58,13 @@ body,html{
 }
 
 .addBook{
-    background-color: black;
-    color: white;
-    height: 40px;
+    height: 20px;
     width: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    margin-top: -5px;
 }
 
 #books{
@@ -39,3 +73,61 @@ body,html{
     background-color: black;
     color: white;
 }   
+
+.gridContainer{
+    display: flex;
+    font-size: 18px;
+}
+
+.labelGrid{
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    align-items: center;
+    font-size: 23px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.titleLabel{
+    margin-right: 267px;
+}
+
+.authorLabel{
+    margin-right: 50px;
+}
+
+.pagesLabel{
+    margin-right: 50px;
+}
+
+.readLabel{
+    margin-right: 100px;
+}
+
+.titleGrid{
+	width: 279px;
+    margin-left: 230px;
+    margin-right: 62px;
+}
+
+.authorGrid{
+    width: 127px;
+    margin-right: 10px;
+}
+
+.pagesGrid{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.readLabel{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#form{
+    opacity: 0;
+}

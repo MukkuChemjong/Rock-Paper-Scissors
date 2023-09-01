@@ -12,6 +12,11 @@ function Book(author, title, pages){
     this.pages = pages;
 }
 
+function showWindow(){
+    console.log("here");
+    document.getElementById("form").style.opacity = "1";
+}
+
 function addBook(){
     var author = document.getElementById("authorId").value;
     var title = document.getElementById("titleId").value;
@@ -19,6 +24,15 @@ function addBook(){
 
     const newbook = new Book(author,title,pages);
     myLibrary.push(newbook);
-    document.getElementById("bookLibrary").innerHTML += `<div id='books'>${newbook.author} <br> ${newbook.title} <br> ${newbook.pages} <br> </div>`;
+
+    if(author === null || title === null || pages === null){
+        prompt("Error!");
+    }
+    else{
+        document.getElementById("form").style.opacity = "0";
+        document.getElementById("titleGridId").innerHTML += `<div class='title'>${newbook.title}</div>`;
+        document.getElementById("authorGridId").innerHTML += `<div class='author'>${newbook.author}</div>`;
+        document.getElementById("pagesGridId").innerHTML += `<div class='pages'>${newbook.pages}</div>`;
+    }
 }
 

@@ -13,20 +13,45 @@
         <p class="webtitle">Library</p>
         <button class="signin">Sign</button>
     </div>
-    <button class="addBook" onclick="showWindow()">+</button>
-    <div class="mainbody" >
-        <form action="#">
-            <input type="text" class="title" id="titleId" placeholder="Title"> 
-            <input type="text" class="author" id= "authorId"placeholder="Author">
-            <input type="number" class="pages"  id="pagesId" placeholder="Pages">
+    <div class="mainbody">
+        <form action="#" id="form">
+            <input type="text" class="input" id="titleId" placeholder="Title" style="margin-top: 26px;" required> 
+            <input type="text" class="input" id= "authorId"placeholder="Author" required>
+            <input type="number" class="input"  id="pagesId" placeholder="Pages" required>
+            <div style="display: flex; align-items: center;">
+                <input type="radio" name="readorNot" id="readBook" style="margin-left: 10px;"><br>    
+                <label for="readBook" class="readLabel">Read</label>
+                <input type="radio" id="notRead" name="readorNot" style="margin-left: -16px; margin-right: 18px;"><br>
+                <label for="notRead" class="readLabel" style="margin-left: -10px;">Not Read</label>
+            </div>
+            
             <button type="submit" class="submit" onclick="addBook()" >Submit</button>
         </form>
-        <p id="display">author: J. R. R. Tolkien
-            title: The Lord of the Rings
-            pages: 1216
-        </p>
-        <div id="bookLibrary">
-            
+        
+        <div class="labelGrid">
+            <div class="titleLabel">Title</div>
+            <div class="authorLabel">Author</div>
+            <div class="pagesLabel">Pages</div>
+            <div class="readLabel">Read</div>
+            <button class="addBook" id="addbookId"onclick="showWindow()">+</button>
+        </div>
+        
+        <div class="gridContainer">
+            <div class="titleGrid" id="titleGridId">
+                <div class="title">The Lord of the Rings </div> 
+            </div>
+
+            <div class="authorGrid" id="authorGridId">
+                <div class="author">J. R. R. Tolkien</div>
+            </div>
+
+            <div class="pagesGrid" id="pagesGridId">
+                <div class="pages">1250</div>     
+            </div>
+
+            <div class="readGrid" id="readGridId">
+                <div class="read">Read</div>
+            </div>
         </div>
 
 

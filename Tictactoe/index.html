@@ -1,1 +1,60 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <p class="webtitle" style="margin-left: 10px;">Library</p>
+        <button class="signin">Sign in</button>
+    </div>
+    <div class="mainbody">
+        <form action="#" id="form">
+            <input type="text" class="input" id="titleId" placeholder="Title" style="margin-top: 26px;" required> 
+            <input type="text" class="input" id= "authorId"placeholder="Author" required>
+            <input type="number" class="input"  id="pagesId" placeholder="Pages" required>
+            <div style="display: flex; align-items: center;">
+                <input type="radio" name="readorNot" id="readBook" style="margin-left: 10px;"><br>    
+                <label for="readBook" class="readLabel">Read</label>
+                <input type="radio" id="notRead" name="readorNot" style="margin-left: -16px; margin-right: 18px;"><br>
+                <label for="notRead" class="readLabel" style="margin-left: -10px;">Not Read</label>
+            </div>
+            
+            <button type="submit" class="submit" onclick="addBook()" >Submit</button>
+        </form>
+        
+        <div class="labelGrid">
+            <div class="titleLabel">Title</div>
+            <div class="authorLabel">Author</div>
+            <div class="pagesLabel">Pages</div>
+            <div class="readLabel">Read</div>
+            <button class="addBook" id="addbookId"onclick="showWindow()">+</button>
+        </div>
+        
+        <div class="gridContainer">
+            <div class="titleGrid" id="titleGridId">
+                <div class="title">The Lord of the Rings </div> 
+            </div>
+
+            <div class="authorGrid" id="authorGridId">
+                <div class="author">J. R. R. Tolkien</div>
+            </div>
+
+            <div class="pagesGrid" id="pagesGridId">
+                <div class="pages">1250</div>     
+            </div>
+
+            <div class="readGrid" id="readGridId">
+                <div class="read">Read</div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,33 +1,29 @@
-let firstHorizontalWin1 = 0;
-let secondHorizontalWin1 = 0;
-let thirdHorizontalWin1 = 0;
 
-
-let firstVerticalWin1 = 0;
-let secondVerticalWin1 = 0;
-let thirdVerticalWin1 = 0;
-
-let firstDiagonalWin1 = 0;
-let secondDiagonalWin1 = 0;
-
-
-let firstHorizontalWin2 = 0;
-let secondHorizontalWin2 = 0;
-let thirdHorizontalWin2 = 0;
-
-
-let firstVerticalWin2 = 0;
-let secondVerticalWin2 = 0;
-let thirdVerticalWin2 = 0;
-
-let firstDiagonalWin2 = 0;
-let secondDiagonalWin2 = 0;
-
+let player =
+{
+    firstHorizontalWin1 : 0,
+    secondHorizontalWin1 : 0,
+    thirdHorizontalWin1 : 0,
+    firstVerticalWin1: 0,
+    secondVerticalWin1: 0,
+    thirdVerticalWin1: 0,
+    firstDiagonalWin1: 0,
+    secondDiagonalWin1: 0
+};
+let computer = {
+    firstHorizontalWin2 : 0,
+    secondHorizontalWin2 : 0,
+    thirdHorizontalWin2 : 0,
+    firstVerticalWin2: 0,
+    secondVerticalWin2: 0,
+    thirdVerticalWin2: 0,
+    firstDiagonalWin2: 0,
+    secondDiagonalWin2:0
+};
 let squareChoices = [1,2,3,4,5,6,7,8,9];
 
+
 function generateRandomNumber(){
-    console.log(squareChoices);
-   
     return squareChoices[Math.floor((Math.random() * squareChoices.length))];
 }
 
@@ -39,126 +35,118 @@ function removeChoice(number){
 
 function computerTurn(number){
     if(number === 1){
-        firstHorizontalWin2 += 1;
-        firstDiagonalWin2 += 1;
-        firstVerticalWin2 += 1;
+        computer.firstHorizontalWin2 += 1;
+        computer.firstDiagonalWin2 += 1;
+        computer.firstVerticalWin2 += 1;
         removeChoice(number);
-        if(firstHorizontalWin2 === 3 || firstDiagonalWin2 === 3 || firstVerticalWin2 === 3){
+        if(computer.firstHorizontalWin2 === 3 || computer.firstDiagonalWin2 === 3 || computer.firstVerticalWin2 === 3){
             alert("player 2 wins");
         }
     }
     
     if(number === 2){
-        firstHorizontalWin2 += 1;
-        secondVerticalWin2 += 1;
+        computer.firstHorizontalWin2 += 1;
+        computer.secondVerticalWin2 += 1;
         removeChoice(number);
-        if(firstHorizontalWin2 === 3 || secondVerticalWin2 === 3){
+        if(computer.firstHorizontalWin2 === 3 || computer.secondVerticalWin2 === 3){
             alert("player 2 wins");
         }
         
     }
 
     if(number === 3){
-        firstHorizontalWin2 += 1;
-        secondDiagonalWin2 += 1;
-        thirdVerticalWin2 += 1;
+        computer.firstHorizontalWin2 += 1;
+        computer.secondDiagonalWin2 += 1;
+        computer.thirdVerticalWin2 += 1;
         removeChoice(number);
-        if(firstHorizontalWin2 === 3 || secondDiagonalWin2 === 3 || thirdVerticalWin2 === 3){
+        if(computer.firstHorizontalWin2 === 3 || computer.secondDiagonalWin2 === 3 || computer.thirdVerticalWin2 === 3){
             alert("player 2 wins");
         }
     }
 
     if(number === 4){
-        secondHorizontalWin2 += 1;
-        firstVerticalWin2 += 1;
+        computer.secondHorizontalWin2 += 1;
+        computer.firstVerticalWin2 += 1;
         removeChoice(number);
-        if(secondHorizontalWin2 === 3 || firstVerticalWin2 === 3){
+        if(computer.secondHorizontalWin2 === 3 || computer.firstVerticalWin2 === 3){
             alert("player 2 wins");
         }
     }
 
     if(number === 5){
-        secondHorizontalWin2 += 1;
-        secondVerticalWin2 += 1;
-        firstDiagonalWin2 += 1;
-        secondDiagonalWin2 += 1;
+        computer.secondHorizontalWin2 += 1;
+        computer.secondVerticalWin2 += 1;
+        computer.firstDiagonalWin2 += 1;
+        computer.secondDiagonalWin2 += 1;
         removeChoice(number);
-        if(secondHorizontalWin2 === 3 || secondVerticalWin2 === 3 || firstDiagonalWin2 === 3 || secondDiagonalWin2 === 3){
+        if(computer.secondHorizontalWin2 === 3 || computer.secondVerticalWin2 === 3 || computer.firstDiagonalWin2 === 3 || computer.secondDiagonalWin2 === 3){
             alert("player 2 wins");
         }
     }
 
 
     if(number === 6){
-        secondHorizontalWin2 += 1;
-        thirdVerticalWin2 += 1;
+        computer.secondHorizontalWin2 += 1;
+        computer.thirdVerticalWin2 += 1;
         removeChoice(number);
-        if(secondHorizontalWin2 === 3 || thirdVerticalWin2 === 3){
+        if(computer.secondHorizontalWin2 === 3 || computer.thirdVerticalWin2 === 3){
             alert("player 2 wins");
         }
     }
 
 
     if(number === 7){
-        thirdHorizontalWin2 += 1;
-        firstVerticalWin2 += 1;
-        secondDiagonalWin2 += 1; 
+        computer.thirdHorizontalWin2 += 1;
+        computer.firstVerticalWin2 += 1;
+        computer.secondDiagonalWin2 += 1; 
         removeChoice(number);
-        if(thirdHorizontalWin2 === 3 || firstVerticalWin2 === 3 || secondDiagonalWin2 === 3){
+        if(computer.thirdHorizontalWin2 === 3 || computer.firstVerticalWin2 === 3 || computer.secondDiagonalWin2 === 3){
             alert("player 2 wins");
         }
     }
 
     if(number === 8){
-        thirdHorizontalWin2 += 1;
-        secondVerticalWin2 += 1;
+        computer.thirdHorizontalWin2 += 1;
+        computer.secondVerticalWin2 += 1;
         removeChoice(number);
-        if(thirdHorizontalWin2 === 3 || secondVerticalWin2 === 3){
+        if(computer.thirdHorizontalWin2 === 3 || computer.secondVerticalWin2 === 3){
             alert("player 2 wins");
         }
     }
         
 
     if(number === 9){
-        thirdHorizontalWin2 += 1;
-        thirdVerticalWin2 += 1;
-        firstDiagonalWin2 += 1;
+        computer.thirdHorizontalWin2 += 1;
+        computer.thirdVerticalWin2 += 1;
+        computer.firstDiagonalWin2 += 1;
         removeChoice(number);
-        if(thirdHorizontalWin2 === 3 || thirdVerticalWin2 === 3 || firstDiagonalWin2 === 3){
+        if(computer.thirdHorizontalWin2 === 3 || computer.thirdVerticalWin2 === 3 || computer.firstDiagonalWin2 === 3){
             alert("player 2 wins");
         }
     }
 
     document.getElementById(`squareId${number}`).innerHTML = "o";
     document.getElementById(`squareId${number}`).style.color = "black";
-    document.getElementById(`squareId${number}`).disabled;
+    document.getElementById(`squareId${number}`).disabled = true;
 }
 
 function addSymbol(number){
     if(number === 1){
-        firstHorizontalWin1 += 1;
-        firstDiagonalWin1 += 1;
-        firstVerticalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-        console.log(squareChoices);
-
-        if(firstHorizontalWin1 === 3 || firstDiagonalWin1 === 3 || firstVerticalWin1 === 3){
+        player.firstHorizontalWin1 += 1;
+        player.firstDiagonalWin1 += 1;
+        player.firstVerticalWin1 += 1;
+        removeChoice(number);
+        if(player.firstHorizontalWin1 === 3 || player.firstDiagonalWin1 === 3 || player.firstVerticalWin1 === 3){
             alert("player 1 wins");
             return;
         }
     }
 
-
     if(number === 2){
-        firstHorizontalWin1 += 1;
-        secondVerticalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(firstHorizontalWin1 === 3 || secondVerticalWin1 === 3){
+        player.firstHorizontalWin1 += 1;
+        player.secondVerticalWin1 += 1;
+        removeChoice(number);
+        if(player.firstHorizontalWin1 === 3 || player.secondVerticalWin1 === 3){
             alert("player 1 wins");
             return;
         }
@@ -166,15 +154,12 @@ function addSymbol(number){
 
 
     if(number === 3){
-        
-        firstHorizontalWin1 += 1;
-        secondDiagonalWin1 += 1;
-        thirdVerticalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(firstHorizontalWin1 === 3 || secondDiagonalWin1 === 3 || thirdVerticalWin1 === 3){
+        player.firstHorizontalWin1 += 1;
+        player.secondDiagonalWin1 += 1;
+        player.thirdVerticalWin1 += 1;
+        removeChoice(number);
+        if(player.firstHorizontalWin1 === 3 || player.secondDiagonalWin1 === 3 || player.thirdVerticalWin1 === 3){
+            
             alert("player 1 wins");
             return;
         }
@@ -183,13 +168,10 @@ function addSymbol(number){
 
     if(number === 4){
        
-        secondHorizontalWin1 += 1;
-        firstVerticalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(secondHorizontalWin1 === 3 || firstVerticalWin1 === 3){
+        player.secondHorizontalWin1 += 1;
+        player.firstVerticalWin1 += 1;
+        removeChoice(number);
+        if(player.secondHorizontalWin1 === 3 || player.firstVerticalWin1 === 3){
             alert("player 1 wins");
             return;
         }
@@ -197,15 +179,12 @@ function addSymbol(number){
 
     if(number === 5){
         
-        secondHorizontalWin1 += 1;
-        secondVerticalWin1 += 1;
-        firstDiagonalWin1 += 1;
-        secondDiagonalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(secondHorizontalWin1 === 3 || secondVerticalWin1 === 3 || firstDiagonalWin1 === 3 || secondDiagonalWin1 === 3){
+        player.secondHorizontalWin1 += 1;
+        player.secondVerticalWin1 += 1;
+        player.firstDiagonalWin1 += 1;
+        player.secondDiagonalWin1 += 1;
+        removeChoice(number);
+        if(player.secondHorizontalWin1 === 3 || player.secondVerticalWin1 === 3 || player.firstDiagonalWin1 === 3 || player.secondDiagonalWin1 === 3){
             alert("player 1 wins");
             return;
         }
@@ -213,13 +192,10 @@ function addSymbol(number){
 
     if(number === 6){
        
-        secondHorizontalWin1 += 1;
-        thirdVerticalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(secondHorizontalWin1 === 3 || thirdVerticalWin1 === 3){
+        player.secondHorizontalWin1 += 1;
+        player.thirdVerticalWin1 += 1;
+        removeChoice(number);
+        if(player.secondHorizontalWin1 === 3 || player.thirdVerticalWin1 === 3){
             alert("player 1 wins");
             return;
         }
@@ -227,42 +203,32 @@ function addSymbol(number){
 
     if(number === 7){
        
-        thirdHorizontalWin1 += 1;
-        firstVerticalWin1 += 1;
-        secondDiagonalWin1 += 1; 
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(thirdHorizontalWin1 === 3 || firstVerticalWin1 === 3 || secondDiagonalWin1 === 3){
+        player.thirdHorizontalWin1 += 1;
+        player.firstVerticalWin1 += 1;
+        player.secondDiagonalWin1 += 1; 
+        removeChoice(number);
+        if(player.thirdHorizontalWin1 === 3 || player.firstVerticalWin1 === 3 || player.secondDiagonalWin1 === 3){
             alert("player 1 wins");
             return;
         }
     }
 
     if(number === 8){
-        
-        thirdHorizontalWin1 += 1;
-        secondVerticalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(thirdHorizontalWin1 === 3 || secondVerticalWin1 === 3){
+        player.thirdHorizontalWin1 += 1;
+        player.secondVerticalWin1 += 1;
+        removeChoice(number);
+        if(player.thirdHorizontalWin1 === 3 || player.secondVerticalWin1 === 3){
             alert("player 1 wins");
             return;
         }
     }
 
     if(number === 9){
-        thirdHorizontalWin1 += 1;
-        thirdVerticalWin1 += 1;
-        firstDiagonalWin1 += 1;
-        const index = squareChoices.indexOf(number);
-
-        squareChoices.splice(index, 1);
-
-        if(thirdHorizontalWin1 === 3 || thirdVerticalWin1 === 3 || firstDiagonalWin1 === 3){
+        player.thirdHorizontalWin1 += 1;
+        player.thirdVerticalWin1 += 1;
+        player.firstDiagonalWin1 += 1;
+        removeChoice(number);
+        if(player.thirdHorizontalWin1 === 3 || player.thirdVerticalWin1 === 3 || player.firstDiagonalWin1 === 3){
             alert("player 1 wins");
             return;
         }
@@ -270,7 +236,34 @@ function addSymbol(number){
 
     document.getElementById(`squareId${number}`).innerHTML = "x";
     document.getElementById(`squareId${number}`).style.color = "black";
-    document.getElementById(`squareId${number}`).disabled;
+    document.getElementById(`squareId${number}`).disabled = true;
 
     computerTurn(generateRandomNumber());
+}
+
+function newGame(){
+    player.firstHorizontalWin1 = 0;
+    player.secondHorizontalWin1 = 0;
+    player.thirdHorizontalWin1 = 0;
+    player.firstVerticalWin1= 0;
+    player.secondVerticalWin1= 0;
+    player.thirdVerticalWin1= 0;
+    player.firstDiagonalWin1= 0;
+    player.secondDiagonalWin1=0;
+
+    computer.firstHorizontalWin2 = 0;
+    computer.secondHorizontalWin2 = 0;
+    computer.thirdHorizontalWin2 = 0;
+    computer.firstVerticalWin2 = 0;
+    computer.secondVerticalWin2 = 0;
+    computer.thirdVerticalWin2 = 0;
+    computer.firstDiagonalWin2 = 0;
+    computer.secondDiagonalWin2 = 0;
+    squareChoices = [1,2,3,4,5,6,7,8,9];
+
+    for(var i = 0; i < 9; i++){
+        document.querySelectorAll(".square")[i].innerHTML = 0;
+        document.querySelectorAll(".square")[i].style.color = "white";
+        document.querySelectorAll(".square")[i].disabled = false;
+    }
 }

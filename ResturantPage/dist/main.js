@@ -111,6 +111,83 @@ window.onload = function()
     dailySpecials.appendChild(special5);
     dailySpecials.appendChild(special6);
     dailySpecials.appendChild(special7);
+
+    /*Menu Section */
+    let menu = document.createElement("div");
+    let menuSubtitle = document.createElement("h3");
+    let menuTitle = document.createElement("h2");
+    let appetizersList = document.createElement("ul");
+    let aItem1 = document.createElement("li");
+    let aItem2 = document.createElement("li");
+    let aItem3 = document.createElement("li");
+    let mainMenu = document.createElement("h3");
+    let menuList = document.createElement("ul");
+    let menu1 = document.createElement("li");
+    let menu2 = document.createElement("li");
+    let menu3 = document.createElement("li");
+    let desertMenu = document.createElement("h3");
+    let desertList = document.createElement("ul");
+    let desert1 = document.createElement("li");
+    let desert2 = document.createElement("li");
+    let desert3 = document.createElement("li");
+
+    menuTitle.innerHTML = "Menu";
+    menuSubtitle.innerHTML = "Appetizers";
+    aItem1.innerHTML = "Witch's Cauldron Stew";
+    aItem2.innerHTML = "Dragon's Breath Tacos";
+    aItem3.innerHTML = "Ghostly Sliders";
+
+    mainMenu.innerHTML = "Main Course";
+    menu1.innerHTML = "Enchanted Forest Pasta";
+    menu2.innerHTML = "Hauntingly Delicious Pizza";
+    menu3.innerHTML = "Frog Prince Legs with Pumpkin Risotto";
+
+    desertMenu.innerHTML = "Desserts";
+    desert1.innerHTML = "Snow White's Poisoned Apple Pie";
+    desert2.innerHTML = "Midnight Chocolate Cake";
+    desert3.innerHTML = "Sleeping Beauty's Dreamy Tiramisu";
+
+    menu.setAttribute("class", "menu");
+    bodyClass.appendChild(menu);
+    menu.appendChild(menuTitle);
+    menu.appendChild(menuSubtitle);
+    menu.appendChild(appetizersList);
+    appetizersList.appendChild(aItem1);
+    appetizersList.appendChild(aItem2);
+    appetizersList.appendChild(aItem3);
+    menu.appendChild(mainMenu);
+    menu.appendChild(menuList);
+    menuList.appendChild(menu1);
+    menuList.appendChild(menu2);
+    menuList.appendChild(menu3);
+    menu.appendChild(desertMenu);
+    desertMenu.appendChild(desertList);
+    desertList.appendChild(desert1);
+    desertList.appendChild(desert2);
+    desertList.appendChild(desert3);
+
+    /*About us Section*/
+    let aboutUs = document.createElement("div");
+    let paragraph1 = document.createElement("p");
+    let paragraph2 = document.createElement("p");
+    let paragraph3 = document.createElement("p");
+    let paragraph4 = document.createElement("p");
+    let aboutusSubtitle = document.createElement("h2");
+
+    aboutUs.setAttribute("class", "aboutUs");
+
+    aboutusSubtitle.innerHTML = "About Us";
+    paragraph1.innerHTML = "Welcome to Erie Estate, your premier destination for a hauntingly delightful dining experience. Nestled within the walls of our centuries-old castle, we offer a unique blend of culinary artistry and supernatural ambiance.";
+    paragraph2.innerHTML = "Our story begins with a legendary chef who, centuries ago, made a pact with the spirits of the castle to create dishes that are out of this world—both in flavor and presentation. Over the years, our chefs have continued this tradition, crafting dishes that are as enchanting as they are delicious.";
+    paragraph3.innerHTML = "At Erie Estate, we pride ourselves on delivering exceptional dining experiences. From our Haunted Dining Nights to Ghost Tours, each visit promises a touch of magic and mystery that you won't find anywhere else.";
+    paragraph4.innerHTML = "Come and join us for an unforgettable journey into the world of the supernatural, where every meal is a spellbinding adventure.";
+
+    bodyClass.appendChild(aboutUs);
+    aboutUs.appendChild(aboutusSubtitle);
+    aboutUs.appendChild(paragraph1);
+    aboutUs.appendChild(paragraph2);
+    aboutUs.appendChild(paragraph3);
+    aboutUs.appendChild(paragraph4);
 };
 
 function toggleMenu() {
